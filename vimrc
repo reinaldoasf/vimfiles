@@ -27,6 +27,8 @@
   
   "add a new line
   nmap m o<ESC>k
+  "dont continue comments when pushing o/O
+  au FileType * set formatoptions-=o
   
   "statusline setup when lighline is not present
   set statusline=%f               "tail of the filename
@@ -66,9 +68,7 @@
     colorscheme default
   endif
   "Force transparent background independly of the colorscheme
-  hi Normal guibg=NONE ctermbg=NONE.
-  "dont continue comments when pushing o/O
-  au FileType * set formatoptions-=o
+  hi Normal guibg=NONE ctermbg=NONE
   
   "key mapping for tab navigation
   nmap <Tab> gt

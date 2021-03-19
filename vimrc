@@ -66,7 +66,9 @@
     colorscheme default
   endif
   "Force transparent background independly of the colorscheme
-  hi Normal guibg=NONE ctermbg=NONE
+  hi Normal guibg=NONE ctermbg=NONE.
+  "dont continue comments when pushing o/O
+  au FileType * set formatoptions-=o
   
   "key mapping for tab navigation
   nmap <Tab> gt

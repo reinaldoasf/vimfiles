@@ -18,6 +18,7 @@
   set history=1000
   set hlsearch        "hilight searches by default
   set showbreak=↪\ 
+  set showmode        "show current mode down the bottom
   "spellcheck langs
   set spelllang=en_us,pt_br
   "try to make possible to navigate within lines of wrapped lines
@@ -50,6 +51,11 @@
   set undolevels=100         " How many undos
   set undoreload=1000       " number of lines to save for undo
   
+  "setting dir for swp files
+  set dir=$HOME/.vim/tmp//,/tmp//
+  set backupdir=$HOME/.vim/tmp//,/tmp//
+  set backup
+
   "set dracula colorscheme 
   packadd! dracula
   syntax enable
@@ -62,6 +68,9 @@
   "Force transparent background independly of the colorscheme
   hi Normal guibg=NONE ctermbg=NONE
   
+  "key mapping for tab navigation
+  nmap <Tab> gt
+  nmap <S-Tab> gT
   
   "Plugins remember to use :PluginInstall to use them or just comment it it dont like it
   "Nerd tree file search

@@ -24,6 +24,8 @@
   "try to make possible to navigate within lines of wrapped lines
   nmap <Down> gj
   nmap <Up> gk
+  set colorcolumn=100
+  highlight ColorColumn ctermbg=2
   
   "add a new line
   nmap m o<ESC>k
@@ -59,14 +61,7 @@
   set backup
 
   "set dracula colorscheme 
-  packadd! dracula
-  syntax enable
-  if split($TERM,"-")[1] ==? '256color'
-    set t_Co=256
-    colorscheme dracula
-  else
-    colorscheme default
-  endif
+  syntax enable"
   "Force transparent background independly of the colorscheme
   hi Normal guibg=NONE ctermbg=NONE
   
@@ -80,9 +75,12 @@
     Plug 'preservim/nerdtree'
     Plug 'frazrepo/vim-rainbow'
     Plug 'itchyny/lightline.vim'
+    Plug 'fcpg/vim-farout'
   call plug#end()
   
+  colorscheme farout
   "au FileType c,cpp,js, call rainbow#load()
   "set rainbow brackets active usefull for some languages
   let g:rainbow_active = 1
   nnoremap <C-o> :NERDTree<CR>
+

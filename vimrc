@@ -41,6 +41,17 @@
   set statusline+=%l/%L           "cursor line/total lines
   set statusline+=\ %P            "percent through file
   set laststatus=2
+  let g:ale_completion_enabled = 1
+  let g:ale_linters = {'python': 'all'}
+  let g:ale_fixers = {'python': ['isort', 'yapf', 'remove_trailing_lines', 'trim_whitespace']}
+  let g:ale_lsp_suggestions = 1
+  let g:ale_fix_on_save = 1
+  let g:ale_go_gofmt_options = '-s'
+  let g:ale_go_gometalinter_options = '— enable=gosimple — enable=staticcheck'
+  let g:ale_completion_enabled = 1
+  let g:ale_echo_msg_error_str = 'E'
+  let g:ale_echo_msg_warning_str = 'W'
+  let g:ale_echo_msg_format = '[%linter%] [%severity%] %code: %%s'
   
   "indent settings for specific langs
   au FileType tex setlocal ts=2 sw=2 sts=2 tw=79 fo+=t fo-=l
@@ -76,6 +87,12 @@
     Plug 'frazrepo/vim-rainbow'
     Plug 'itchyny/lightline.vim'
     Plug 'fcpg/vim-farout'
+    Plug 'dense-analysis/ale'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'jeetsukumaran/vim-pythonsense'
+    Plug 'liuchengxu/vista.vim'
+    Plug 'davidhalter/jedi-vim'
   call plug#end()
   
   colorscheme farout

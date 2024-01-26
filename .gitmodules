@@ -4,3 +4,6 @@
 [submodule "vim-farout"]
 	path = vim-farout
 	url = https://github.com/fcpg/vim-farout
+[submodule "YouCompleteMe"]
+	path = YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe

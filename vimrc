@@ -1,8 +1,8 @@
   "syntax on
   set number
-  set tabstop=2
+  "set tabstop=2
   "Tabs as spaces
-  set expandtab
+  set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
   "Force to show command in bottonbar
   set showcmd
   "Show a horizontal line in cursor position
